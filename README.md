@@ -9,7 +9,7 @@ This is the backend for Shopify Backend/ Infrastructure Internship Challenge. I 
 - Search images by another image
 - Delete an image with password verification
 
-The technologies utilized in this project were express, multer, uuidv4, bcrypt and Google Cloud Vision API.
+The technologies utilized in this project were Express, Multer, Uuidv4, Bcrypt and Google Cloud Vision API.
 
 ## Installation and Setup Instructions
 
@@ -21,13 +21,13 @@ Run:
 
 - ``npm install `` on your terminal.
 
-Then, run the server by writing ``node index.js`` on terminal. In these examples, I use Postman as the HTTP client to send requests to  http://localhost:3000. However, any HTTP client works just as well.
+Then, run the server by writing ``node index.js`` on terminal. In these examples, I use ``Postman`` as the HTTP client to send requests to  http://localhost:3000. However, any HTTP client works just as well.
 
 **Running locally works only if a Google Cloud Vision API key is provided.**
 
 ### Running on Heroku
 
-**The backend is also hosted on heroku**. Again, I prefer using Postman as my HTTP client to send requests to [https://arya-image-repo.herokuapp.com/](https://arya-image-repo.herokuapp.com/). **No API key is required for this method.**
+**The backend is also hosted on heroku**. Again, I prefer using ``Postman`` as my HTTP client to send requests to [https://arya-image-repo.herokuapp.com/](https://arya-image-repo.herokuapp.com/). **No API key is required for this method.**
 
 ## Choice of Database
 
@@ -125,7 +125,7 @@ POST ``/search/``
 
 ### Examples:
 - Here, after my uploads, I search for keyword cat and get the paths of two cat pictures as response. 
-- Then, I search for keyword "design" and get the path of the logo image. 
+- Next, I search for keyword "design" and get the path of the logo image. 
 - Then, I search a keyword that does not match anything and get an empty array as result.
 - Finally, I search by an image of another cat and get the paths of two cat pictures as response.
 
@@ -158,7 +158,7 @@ DELETE ``/delete/``
 - Then, I attempt to delete a password enabled image  with no password and get an error.
 - Finally,I successfuly delete the password enabled image with the correct password.
 
-<img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.48.19%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.20%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.30%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.50%20PM.png" width="450" height="360">
+<img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.48.19%20PM.png" width="500" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.20%20PM.png" width="500" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.30%20PM.png" width="500" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.50%20PM.png" width="500" height="360">
 
 
 
