@@ -86,7 +86,8 @@ POST ``/add/``
 - The reason for using auto-generated keywords is to **implement a secure and coherent search functionality** which returns all relevant images to the search query.
 
 ### Examples:
-Here, I consecutively added two different cat jpg images with password and another png logo image without password. Then, I attempted sending a requst with no image file and later with a pdf file. Appropriate errors were thrown for these two attempts.
+- Here, I consecutively added two different cat jpg images with password and another png logo image without password. 
+- Then, I attempted sending a requst with no image file and later with a pdf file. Appropriate errors were thrown for these two attempts.
 
 <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.40.47%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.41.21%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.42.24%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.44.57%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.45.23%20PM.png" width="450" height="360">
 
@@ -122,6 +123,15 @@ POST ``/search/``
 
 - Their paths are returned in an array.
 
+### Examples:
+- Here, after my uploads, I search for keyword cat and get the paths of two cat pictures as response. 
+- Then, I search for keyword "design" and get the path of the logo image. 
+- Then, I search a keyword that does not match anything and get an empty array as result.
+- Finally, I search by an image of another cat and get the paths of two cat pictures as response.
+
+<img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.45.48%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.45.59%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.46.09%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.46.47%20PM.png" width="450" height="360">
+
+
 ## Deleting Images
 
 DELETE ``/delete/``
@@ -141,6 +151,16 @@ DELETE ``/delete/``
 - If such image exists and it has no password set, it is deleted immediately from the storage, keyword database and imaga database.
 - If such image exists and it has a password set, it is deleted after checking that two passwords match. If the password passed to the request is inexistent or invalid, appropriate errors are thrown.
 - If deletion is succesful, a confirmation message is sent.
+
+### Examples:
+- First, I successfully delete the logo image that I uploaded without password
+- Next, I attempt to delete a password enabled image with a wrong password and get an error.
+- Then, I attempt to delete a password enabled image  with no password and get an error.
+- Finally,I successfuly delete the password enabled image with the correct password.
+
+<img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.48.19%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.20%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.30%20PM.png" width="450" height="360"> <img src="https://github.com/aryaakkus/shopify-image-repository/blob/master/screenshots/Screen%20Shot%202021-01-13%20at%203.49.50%20PM.png" width="450" height="360">
+
+
 
 ## Reflections
 
